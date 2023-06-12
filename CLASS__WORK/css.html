@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .x 
+        {
+            height: 200px;
+            width: 200px;
+            background: linear-gradient(red,blue);
+            color:#fff;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hello</h1>
+
+    <button class="b1">Add CSS</button>
+    <button class="b2">Remove CSS</button>
+    <button class="b3">Add-Remove CSS</button>
+    <script>
+// $('selector').css("property","value")
+
+//  $(selector).css({
+//     "property":"value","property":"value"
+// })
+
+
+$(document).ready(()=>{
+
+    
+$('h1').click(()=>{
+
+    $('h1').css({
+        "background":"lightblue","color":"coral","font-size":"24px","height":"200px","width":"200px"
+    })
+// $('h1').css("color","red");
+// $('h1').css("background","lightblue");
+// $('h1').css("width","200px");
+// $('h1').css("height","100px");
+// $('h1').css("font-size","45px");
+
+})
+
+$('.b1').click(()=>{
+    $('h1').addClass('x');
+})
+
+
+$('.b2').click(()=>{
+    $('h1').removeClass('x');
+})
+
+$('.b3').click(()=>{
+    $('h1').toggleClass('x');
+})
+
+
+
+})
+ 
+    </script>
+    
+</body>
+</html>
