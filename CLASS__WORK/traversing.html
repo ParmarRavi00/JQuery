@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <style>
+        /* .gp,ul,li,span
+        {
+            border:2px solid gray;
+        } */
+
+        .main *
+        {
+            border: 3px solid;
+            padding: 35px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="main">
+        <div class="gp">Grandparent
+            <ul>UL
+                <li>LI
+                    <span>Span</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+<h1></h1>
+    <div class="main">
+        <div class="gp">Grandparent
+            <ul>UL
+                <li>LI
+                    <span>Span</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+
+        $('span').parents().css("border","2px solid red");
+
+        $('span').parents('ul').css("border","2px solid green");
+
+        $('span').parents('.gp').css("border","2px solid blue");
+
+        $('span').parent().css("border","2px solid gray");
+
+        $('span').parentsUntil(".gp").css("border","9px solid pink");
+
+        
+    </script>
+</body>
+</html>

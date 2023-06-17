@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Document</title>
+    <style>
+      .x,
+      .y {
+        background-color: lightcyan;
+        font-size: 20px;
+        border: 2px solid red;
+      }
+
+      .y {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="x">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores velit
+      ipsum vitae rem labore libero consequuntur modi cupiditate at, inventore
+      excepturi pariatur, perspiciatis quas dignissimos laborum. Cumque
+      quibusdam corrupti velit. Tempora animi repellendus repudiandae optio
+      tempore quaerat, dolor sed minima consequatur pariatur unde rerum non
+      consectetur, libero odio voluptates. Libero exercitationem perferendis
+    </div>
+
+    <div class="y">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni facilis
+      vero maiores voluptatibus. Voluptates quas consequatur eligendi, enim
+      perferendis eum quae. Eveniet temporibus vel ut nemo eaque, nisi magni
+      dignissimos quasi omnis consequuntur nobis voluptas tenetur. Minus
+      obcaecati nesciunt quaerat quas. Magni aperiam, sunt sed temporibus
+      perspiciatis eum porro sint neque facere voluptas dolores natus quae
+      fugiat numquam praesentium modi
+    </div>
+
+    <script>
+      //   $(".x").click(() => {
+      //     $(".y").slideDown(2000, () => {
+      //       $(".x").css("background", "lightblue");
+      //     });
+      //   });
+
+      $(".x").click(() => {
+        $(".y").slideToggle(2000, () => {
+          $(".x").css("background", "lightblue");
+        });
+      });
+    </script>
+  </body>
+</html>

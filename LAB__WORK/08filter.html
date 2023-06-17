@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <h1 class="x">Heading 1</h1>
+    <h1 class="x">Heading 2</h1>
+    <h1>Heading 3</h1>
+    <h1>Heading 4</h1>
+    <h1 class="x">Heading 5</h1>
+
+    <script>
+      //$.noConflict();
+
+      karan = $.noConflict();
+
+      karan(".x").css("color", "red");
+      karan("h1").css("color", "blue");
+      karan("h1").filter(".x").css("color", "green"); //==> Method Chaining
+
+      jQuery("h1").not(".x").css("color", "pink");
+
+      $("h1").first().css("color", "red");
+      $("h1").last().css("color", "red");
+      $("h1").eq(4).css("color", "cyan");
+
+      $(".x").eq(2).css("background", "lightblue");
+    </script>
+  </body>
+</html>

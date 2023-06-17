@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .x {
+        height: 200px;
+        width: 200px;
+        background-color: aquamarine;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div class="x"></div>
+
+    <button class="cs">Click Me</button>
+
+    <button class="ani">Animate</button>
+
+    <script>
+      $(".cs").click(() => {
+        $(".x").css("margin-left", "500px");
+      });
+
+      //   ----------------------------------------------
+
+      $(".ani").click(() => {
+        $(".x").animate({ "margin-left": "0px" });
+      });
+    </script>
+  </body>
+</html>

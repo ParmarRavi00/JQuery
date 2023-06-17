@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <style>
+      /* .gp,ul,li,span
+        {
+            border:2px solid gray;
+        } */
+
+      .main * {
+        border: 3px solid;
+        padding: 35px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="gp">
+        Grandparent
+        <ul>
+          UL
+          <li>
+            LI
+            <span>Span</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <h1></h1>
+    <div class="main">
+      <div class="gp">
+        Grandparent
+        <ul>
+          UL
+          <li>
+            LI
+            <span>Span</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      // ==> CSS na Behavior mujab child ma border Apply Karta te ONLY tena FIRST child ne j Apply thase
+
+      // ==> jyare Background Tena Badha Child ne Apply thase
+
+      $(".gp").children().css("background", "red"); // ==> Badha Child ne Select Karse
+
+      $(".gp").children().css("background", "green");
+
+      $(".gp").find("li").css("background", "gray"); // ==> gp na "li" child ne select Karse
+
+      $(".gp").find("span").css("background", "pink");
+    </script>
+  </body>
+</html>
